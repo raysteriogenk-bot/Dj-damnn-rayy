@@ -1,0 +1,76 @@
+body{
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+text-align:center;
+}
+
+#welcome{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+button{
+padding:12px 28px;
+font-size:18px;
+background:#ff00aa;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.dj-photo{
+width:200px;
+border-radius:20px;
+box-shadow:0 0 30px #ff00aa;
+margin-top:20px;
+}
+
+.dancer{
+width:200px;
+margin-top:20px;
+border-radius:20px;
+box-shadow:0 0 40px cyan;
+}
+
+.equalizer{
+margin-top:20px;
+}
+
+.equalizer span{
+display:inline-block;
+width:10px;
+margin:2px;
+background:cyan;
+animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+0%,100%{height:20px;}
+50%{height:80px;}
+}
+
+.fireworks{
+position:fixed;
+width:150px;
+height:150px;
+background:radial-gradient(circle,#ff00aa,transparent);
+animation:explode 1.5s infinite;
+}
+
+.left{left:0;top:30%;}
+.right{right:0;top:30%;}
+
+@keyframes explode{
+from{transform:scale(0.5);opacity:1;}
+to{transform:scale(2);opacity:0;}
+}
