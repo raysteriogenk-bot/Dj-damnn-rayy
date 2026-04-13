@@ -1,0 +1,94 @@
+
+body{
+margin:0;
+background:black;
+font-family:Arial;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+#welcome{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+button{
+padding:15px 40px;
+font-size:20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.title{
+margin-top:20px;
+font-size:40px;
+text-shadow:0 0 20px #ff00ff;
+position:relative;
+z-index:5;
+}
+
+.dj{
+width:240px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 0 60px cyan;
+position:relative;
+z-index:5;
+}
+
+.stage-lights{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:repeating-linear-gradient(
+45deg,
+rgba(255,0,255,0.1) 0px,
+rgba(0,255,255,0.1) 20px,
+transparent 40px
+);
+animation:lightsMove 5s linear infinite;
+z-index:1;
+}
+
+@keyframes lightsMove{
+from{background-position:0 0;}
+to{background-position:400px 400px;}
+}
+
+.crowd{
+position:fixed;
+bottom:0;
+width:100%;
+height:40%;
+background:linear-gradient(to top,#111,transparent);
+z-index:0;
+}
+
+#visualizer{
+position:fixed;
+bottom:0;
+width:100%;
+height:220px;
+z-index:3;
+}
+
+#effects{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:2;
+}
